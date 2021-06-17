@@ -27,37 +27,27 @@
 				<label id="gnav_open" class="gnav-open" for="gnav_input"><span></span></label>
 				<label id="gnav_close" class="gnav-close" for="gnav_input"></label>
 				<div id="gnav-content" class="gnav-content">
-					<ul class="gnav-menu">
-						<li>
-							<a href="#service">Service<br>サービス</a>
-						</li>
-						<li>
-							<a href="#plan">Plan<br>プラン</a>
-						</li>
-						<li>
-							<a href="#access">Access<br>アクセス</a>
-						</li>
-						<li>
-							<a href="#contact">Contact<br>コンタクト</a>
-						</li>
-					</ul>
+					<?php
+					if ( has_nav_menu( 'global' ) ) {
+						wp_nav_menu( array(
+							'theme_location' => 'global',
+							'container'      => '',
+							'items_wrap'     => '<ul class="gnav-menu">%3$s</ul>'
+						) );
+					}
+					?>
 				</div>
 			</div>
 		</nav>
 		<nav class="pc-only">
-			<ul class="gnav-menu">
-				<li>
-					<a href="#service">Service<br>サービス</a>
-				</li>
-				<li>
-					<a href="#plan">Plan<br>プラン</a>
-				</li>
-				<li>
-					<a href="#access">Access<br>アクセス</a>
-				</li>
-				<li>
-					<a href="#contact">Contact<br>コンタクト</a>
-				</li>
-			</ul>
+			<?php
+			if ( has_nav_menu( 'global' ) ) {
+				wp_nav_menu( array(
+					'theme_location' => 'global',
+					'container'      => '',
+					'items_wrap'     => '<ul class="gnav-menu">%3$s</ul>'
+				) );
+			}
+			?>
 		</nav>
 	</header>
