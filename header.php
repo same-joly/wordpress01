@@ -6,7 +6,7 @@
 	<meta name="format-detection" content="telephone=no">
 <?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class(); ?>>
 	<header>
 		<div class="logo-area">
 			<?php
